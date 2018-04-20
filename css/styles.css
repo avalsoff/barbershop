@@ -1,6 +1,147 @@
 body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url('../img/background.jpg');
+
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*********************** Header ***********************/
+.main-nav {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-nav__top-wrapper {
+  background-color: #000;
+}
+
+.main-nav__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-nav,
+.user-options {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+}
+
+.site-nav__link {
+  display: block;
+
+  padding: 26px  20px;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  background-color: #242424;  
+}
+
+.user-options__login-button {
+  display: block;
+
+  padding: 26px  20px 26px 55px;
+
+  position: relative;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-options__login-button::before {
+  display: block;
+
+  content: url(../img/login.svg);
+
+  position: absolute;
+  left: 24px;
+  top: 29px;
+
+  opacity: .3;
+}
+
+.user-options__login-button:hover::before {
+  opacity: 1;
+}
+
+.user-options__login-button:hover {
+  background-color: #242424;
+}
+
+.main-header__logo {
+  margin: 60px auto 68px;
+}
+
+
+/********************* Feautures *********************/
+.features__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.feautres__item {
+  text-align: center;
+}
+
+.feutures__heading {
+  position: relative;
+  font-size: 30px;
+  margin-bottom: 72px;
+}
+
+.feutures__heading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 50%; margin-top: 34px;
+  left: 50%; margin-left: -11px;
+
+  background-color: #fff;
+
+ 
+  transform: rotate(45deg);
 }
