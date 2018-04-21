@@ -9,12 +9,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-
+  
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-color: #070707;
   background-position-x: center;
-
+  background-size: cover;
+  
   font-family: 'PT Sans Narrow', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -31,15 +32,15 @@ body {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
+  
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
+  
   white-space: nowrap;
-
+  
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -52,11 +53,12 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: inline-block;
-
+  
   padding: 10px 34px;
   border: 0;
-
+  
   text-decoration: none;
+  text-transform: uppercase;
   background: #000;
   color: #fff;
   line-height: 24px;
@@ -92,19 +94,19 @@ input[type="radio"].visually-hidden {
 .site-nav,
 .user-options {
   display: flex;
-
+  
   margin: 0;
   padding: 0;
-
+  
   list-style-type: none;
-
+  
 }
 
 .site-nav__link {
   display: block;
-
+  
   padding: 26px  20px;
-
+  
   color: #fff;
   text-decoration: none;
 }
@@ -115,24 +117,24 @@ input[type="radio"].visually-hidden {
 
 .user-options__login-button {
   display: block;
-
+  
   padding: 26px  20px 26px 55px;
-
+  
   position: relative;
-
+  
   color: #fff;
   text-decoration: none;
 }
 
 .user-options__login-button::before {
   display: block;
-
+  
   content: url(../img/login.svg);
-
+  
   position: absolute;
   left: 24px;
   top: 29px;
-
+  
   opacity: .3;
 }
 
@@ -157,10 +159,10 @@ input[type="radio"].visually-hidden {
 .features__list {
   display: flex;
   justify-content: space-between;
-
+  
   margin: 0;
   padding: 0;
-
+  
   list-style-type: none;
 }
 
@@ -179,13 +181,13 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 20px;
   height: 20px;
-
+  
   position: absolute;
   top: 50%; margin-top: 34px;
   left: 50%; margin-left: -11px;
-
+  
   background-color: #fff;
- 
+  
   transform: rotate(45deg);
 }
 
@@ -194,16 +196,16 @@ input[type="radio"].visually-hidden {
 .section-row {
   display: flex;
   flex: 0 0 auto;
-
+  
   justify-content: space-between;
-
+  
   background-image: url(../img/separator.png), url(../img/section-bg.png);
   background-color: #f8f5f2;
   background-repeat: no-repeat, repeat;
   background-position: center;
-
+  
   color: #000;
-
+  
   padding: 50px 80px;
   margin-bottom: 36px;
 }
@@ -306,7 +308,6 @@ input[type="radio"].visually-hidden {
 
 .appointment__form-field {
   display: inline-block;
-  width: 140px;
   margin-top: 8px;
 }
 
@@ -321,6 +322,7 @@ input[type="radio"].visually-hidden {
   padding: 12px 6px 11px 14px;
   width: 140px;
   color: #000;
+  background: transparent;
 }
 
 .appointment__form-field input:hover {
@@ -332,7 +334,7 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment__submit-btn {
-  flex-grow: 1;
+  width: 100%;
   text-transform: uppercase;
   margin-top: 20px;
 }
@@ -342,7 +344,7 @@ input[type="radio"].visually-hidden {
 .main-footer {
   margin-top: 60px;
   padding: 50px 0 30px 0;
-
+  
   background-image: url(../img/footer-bg.png);
 }
 
@@ -423,7 +425,147 @@ input[type="radio"].visually-hidden {
 }
 
 
-/***************** Pop-ups *****************/
+/***************** Modal-login *****************/
 .modal {
+  position: fixed;
+  color: #000;
+}
+
+.modal-login {
+  width: 460px;
+  padding: 25px 80px 58px;
+  top: 14%;
+  left: 50%;
+  margin-left: -230px;
+  background-image: url(../img/section-bg.png);
+  box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+}
+
+.modal-login__heading {
+  margin-bottom: 0;
+}
+
+.modal-login__form-field input {
+  width: 100%;
+  margin-bottom: 8px;
+  border: 2px solid #000101;
+  padding: 12px 6px 11px 14px;  
+  background: transparent;
+  color: #000;
+}
+
+.modal-login__form-field input::placeholder {
+  text-transform: uppercase;
+  color: #000;
+}
+
+.modal-login__remember {
+  position: relative;
+  padding-left: 30px;
+}
+
+.modal-login__remember-indicator {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #000;
+}
+
+.modal-login__user-help {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+
+.modal-login__remember:hover {
+  color: #663d15;
+}
+
+.modal-login__remember input:checked + .modal-login__remember-indicator::after,
+.modal-login__remember input:checked + .modal-login__remember-indicator::before {
+  top: 7px;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.modal-login__remember input:checked + .modal-login__remember-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.modal-login__remember input:checked + .modal-login__remember-indicator::before {
+  transform: rotate(45deg);
+}
+
+.modal-login__submit {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -33px;
+  top: 13px;
+  background: transparent;
+  border: none;
+}
+
+.modal-close::after,
+.modal-close::before {
+  top: 8px;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 4px;
+  background-color: #d0d0d0;
+  border-radius: 3px;
+}
+
+.modal-close::before {
+  transform: rotate(-45deg);
+}
+
+.modal-close::after {
+  transform: rotate(45deg);
+}
+
+.modal-close:hover::after,
+.modal-close:hover::before {
+  background-color: #b0b0b0;
+}
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
+
+/***************** Modal-map *****************/
+.modal-map {
+  top: 14%;
+  left: 50%;
+  margin-left: -390px;
+  box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+}
+
+.modal-map__map-img {
+  display: block;
+  max-width: 100%;
+  height: auto;  
+  border: 6px solid white;  
+}
+
+
+.modal-login,
+.modal-map {
   display: none;
 }
