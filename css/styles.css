@@ -261,22 +261,67 @@ input[type="radio"].visually-hidden {
   width: 350px;
 }
 
+.contacts__address {
+  margin-bottom: 25px;
+}
+
+.contacts__time {
+  margin-bottom: 25px;
+}
+
+.contacts__button {
+  margin-right: 20px;
+}
+
+.contacts__tel {
+  text-decoration: none;
+  color: #000;
+}
+
+.contacts__tel:hover {
+  text-decoration: underline;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+/******************* Appointment *******************/
 .appointment {
   width: 300px;
 }
 
+.appointment__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.appointment__form-field {
+  display: inline-block;
+  width: 140px;
+  margin-top: 8px;
+}
+
+.appointment__form-field label {
+  display: block;
+  margin-left: 17px;
+  margin-bottom: 8px;
+}
+
+.appointment__form-field input {
+  border: 2px solid #000101;
+  padding: 12px 6px 11px 14px;
+  width: 140px;
+  color: #000;
+}
+
+.appointment__form-field input::placeholder {
+  color: #000;
+}
+
+.appointment__submit-btn {
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
 
 
 
