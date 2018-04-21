@@ -1,10 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
 
   background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-color: #070707;
+  background-position-x: center;
 
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
@@ -32,6 +43,24 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section-heading {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 10px 34px;
+  border: 0;
+
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  line-height: 24px;
+  cursor: pointer;
 }
 
 /*********************** Header ***********************/
@@ -112,8 +141,13 @@ input[type="radio"].visually-hidden {
 
 
 /********************* Feautures *********************/
+.features {
+  margin-bottom: 80px;
+}
+
 .features__list {
   display: flex;
+  justify-content: space-between;
 
   margin: 0;
   padding: 0;
@@ -123,6 +157,7 @@ input[type="radio"].visually-hidden {
 
 .feautres__item {
   text-align: center;
+  width: 280px
 }
 
 .feutures__heading {
@@ -141,7 +176,107 @@ input[type="radio"].visually-hidden {
   left: 50%; margin-left: -11px;
 
   background-color: #fff;
-
  
   transform: rotate(45deg);
 }
+
+
+/********************* News *********************/
+.section-row {
+  display: flex;
+  flex: 0 0 auto;
+
+  justify-content: space-between;
+
+  background-image: url(../img/separator.png), url(../img/section-bg.png);
+  background-color: #f8f5f2;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+
+  color: #000;
+
+  padding: 50px 80px;
+  margin-bottom: 36px;
+}
+
+.news {
+  max-width: 350px;
+}
+
+.news__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.news__item {
+  margin-bottom: 28px;
+}
+
+.news__link {
+  text-decoration: none;
+}
+
+.news__link:hover {
+  text-decoration: underline;
+}
+
+.news__date {
+  margin: 0;
+  text-transform: none;
+}
+
+
+/********************* Gallery *********************/
+.gallery {
+  width: 300px;
+  position: relative;
+}
+
+.gallery__link {
+  box-sizing: border-box;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  border: 7px solid #fff;
+}
+
+.gallery__button {
+  width: 140px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.gallery__button--next {
+  position: absolute;
+  right: 0;
+}
+
+
+/********************* Contacts *********************/
+.contacts {
+  width: 350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.appointment {
+  width: 300px;
+}
+
+
+
+
