@@ -63,6 +63,15 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #663d15;
+}
+
+.button--hover-invert:hover {
+  color: #000;
+  background-color: #fff;
+}
+
 /*********************** Header ***********************/
 .main-nav {
   display: flex;
@@ -216,6 +225,7 @@ input[type="radio"].visually-hidden {
 
 .news__link {
   text-decoration: none;
+  color: #000;
 }
 
 .news__link:hover {
@@ -313,6 +323,10 @@ input[type="radio"].visually-hidden {
   color: #000;
 }
 
+.appointment__form-field input:hover {
+  border: 2px solid #663d15;
+}
+
 .appointment__form-field input::placeholder {
   color: #000;
 }
@@ -324,4 +338,92 @@ input[type="radio"].visually-hidden {
 }
 
 
+/***************** Footer-contacts *****************/
+.main-footer {
+  margin-top: 60px;
+  padding: 50px 0 30px 0;
 
+  background-image: url(../img/footer-bg.png);
+}
+
+.main-footer__container {
+  display: flex;
+}
+
+.main-footer__contacts {
+  display: inline-block;
+  flex: 1 0 0;
+}
+
+.main-footer__find-us-link {
+  color: #fff;
+}
+
+.main-footer__tel-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-footer__tel-link:hover {
+  text-decoration: underline;
+}
+
+
+/***************** Social *****************/
+.main-footer__social {
+  display: inline-block;
+  text-align: center;
+  margin: 0 40px;
+  flex: 1 0 0;
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;  
+}
+
+.social-links__item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 3px 6px 0;
+}
+
+.social-links__link {
+  position: relative;
+  display: block;
+  width: 43px;
+  height: 43px;
+  background-color: #000;
+}
+
+.social-links__link:hover {
+  filter: invert(1);
+}
+
+.social-links__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+/***************** Developed-by *****************/
+.developed-by {
+  text-align: end;
+  flex: 1 0 0;
+}
+
+.developed-by__wrapper {  
+  display: inline-block;
+  text-align: center;
+}
+
+
+/***************** Pop-ups *****************/
+.modal {
+  display: none;
+}

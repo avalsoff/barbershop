@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Барбершоп Бородинский</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="main-header"> 
@@ -122,38 +122,45 @@
     </div>
   </main>
   
-  <footer class="main-footer container">
-    <p class="main-footer__contacts">
-      Барбершоп "Бородинский" <br>
-      Адрес: г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8 <br>
-      <a href="#" class="info__find-us-link">Как нас найти?</a> <br>
-      Телефон: <a href="tel:+74956660266">+7 (495) 666-02-66</a>
-    </p>
-    
-    <div class="main-footer__social">
-      Давайте дружить!
-      <ul class="social-links">
-        <li class="social-links__item">
-          <a href="#" class="social-links__link">
-            <div class="social-links__logo">logo</div>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a href="#" class="social-links__link">
-            <div class="social-links__logo">logo</div>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a href="#" class="social-links__link">
-            <div class="social-links__logo">logo</div>
-          </a>
-        </li> 
-      </ul>
-    </div>
-    
-    <div class="developed-by">
-      Разработано:
-      <a href="#" class="button">HTML Academy</a>
+  <footer class="main-footer">
+    <div class="container main-footer__container">
+      <p class="main-footer__contacts">
+        Барбершоп "Бородинский" <br>
+        Адрес: г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8 <br>
+        <a href="#" class="main-footer__find-us-link">Как нас найти?</a> <br>
+        Телефон: <a class="main-footer__tel-link" href="tel:+74956660266">+7 (495) 666-02-66</a>
+      </p>
+      
+      <div class="main-footer__social">
+        <p>Давайте дружить!</p>
+        <ul class="social-links">
+          <li class="social-links__item">
+            <a href="#" class="social-links__link">
+              <h4 class="visually-hidden">Vkontakte</h4>
+              <img src="img/vk.svg" alt="Иконка VK" class="social-links__icon">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link">
+              <h4 class="visually-hidden">Facebook</h4>
+              <img src="img/facebook.svg" alt="Иконка Facebook" class="social-links__icon">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link">
+              <h4 class="visually-hidden">Instagram</h4>
+              <img src="img/instagram.svg" alt="Иконка Instagram" class="social-links__icon">
+            </a>
+          </li> 
+        </ul>
+      </div>
+      
+      <div class="developed-by">
+        <div class="developed-by__wrapper">
+          <p class="developed-by__text">Разработано:</p>
+          <a href="#" class="button button--hover-invert">@Avalsoff</a>
+        </div>
+      </div>
     </div>
   </footer>
   
@@ -161,10 +168,10 @@
     <h2 class="section-heading">Личный кабинет</h2>
     <p>Введите пожалуйста свой логин и пароль</p>
     <form action="#" method="post" class="modal-login__form">
-      <label for="modal-login-login" class="visually-hidden">Логин
+      <label for="modal-login-login" class="">Логин
         <input type="text" name="login" id="modal-login-login">
       </label>
-      <label for="modal-login-pass" class="visually-hidden">Пароль
+      <label for="modal-login-pass" class="">Пароль
         <input type="password" name="pass" id="modal-login-pass">
       </label>
       <label for="modal-login-remember" class="visually-hidden">Запомните меня
