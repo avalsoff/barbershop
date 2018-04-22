@@ -684,6 +684,10 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+.filters {
+  width: 240px;
+}
+
 .filter__group {
   border: none;
   margin: 0;
@@ -751,6 +755,7 @@ input[type="radio"].visually-hidden {
 
 
 .filter__type {
+  display: block;
   position: relative;
   padding-left: 43px;
   cursor: pointer;
