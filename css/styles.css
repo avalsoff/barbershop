@@ -910,6 +910,11 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 }
 
+.product-photos__link {
+  display: block;
+  cursor: pointer;
+}
+
 .product-photos__img {
   display: block;
   min-width: 100%;
