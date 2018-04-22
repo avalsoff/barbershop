@@ -345,6 +345,8 @@ input[type="radio"].visually-hidden {
   margin-top: 60px;
   padding: 50px 0 30px 0;
   
+  color: #fff;
+  
   background-image: url(../img/footer-bg.png);
 }
 
@@ -474,12 +476,6 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000;
 }
 
-.modal-login__user-help {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 7px;
-}
-
 .modal-login__remember:hover {
   color: #663d15;
 }
@@ -502,6 +498,12 @@ input[type="radio"].visually-hidden {
 
 .modal-login__remember input:checked + .modal-login__remember-indicator::before {
   transform: rotate(45deg);
+}
+
+.modal-login__user-help {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
 }
 
 .modal-login__submit {
@@ -549,7 +551,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-/***************** Modal-map *****************/
+/******************* Modal-map ********************/
 .modal-map {
   top: 14%;
   left: 50%;
@@ -564,8 +566,320 @@ input[type="radio"].visually-hidden {
   border: 6px solid white;  
 }
 
-
 .modal-login,
 .modal-map {
   display: none;
 }
+
+
+/****************** Inner page body ****************/
+.inner-page {
+  color: #000;
+  background-image: url(../img/section-bg.png);  
+  background-size: initial;
+  background-repeat: repeat;
+}
+
+
+/***************** Inner page header ****************/
+.inner-page .main-header {
+  background-color: #000;
+}
+
+.inner-page .main-nav {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.inner-page .main-header__logo {
+  margin: 23px 40px 0 0;
+}
+
+.inner-page .user-options {
+  margin-left: auto;
+}
+
+.site-nav__link--current {
+  position: relative;
+}
+
+.site-nav__link--current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background-color: #fff;
+}
+
+
+/***************** Inner page footer ****************/
+.inner-page .main-footer {
+  background-image: url(../img/footer-shadow.png), url(../img/footer-bg.png);
+  background-repeat: repeat-x, repeat;
+}
+
+
+/***************** Shop page ****************/
+
+/**************** Breadcrumps ***************/
+.main-heading {
+  margin-top: 50px  ;
+  
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.breadcrumps {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+  margin-bottom: 52px;
+}
+
+.breadcrumps__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+}
+
+.breadcrumps__item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -25px;
+
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+
+  transform: rotate(45deg);  
+}
+
+.breadcrumps__item:last-child::after {
+  display: none;
+}
+
+.breadcrumps__item--current {
+  color: #aba9a7;
+}
+
+.breadcrumps__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumps__link:hover {
+  text-decoration: underline;
+}
+
+
+
+/**************** Filters ***************/
+.shop-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__group {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.filter__legend {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.filter__list {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.filter__option {
+  margin-bottom: 17px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.filter__manufacture {
+  position: relative;
+  padding-left: 43px;
+  cursor: pointer;
+}
+
+.filter__manufacture-indicator {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 21px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #000;
+}
+
+.filter__manufacture:hover {
+  color: #663d15;
+}
+
+.filter__manufacture input:checked + .filter__manufacture-indicator::after,
+.filter__manufacture input:checked + .filter__manufacture-indicator::before {
+  top: 7px;
+  left: 2px;
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.filter__manufacture input:checked + .filter__manufacture-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.filter__manufacture input:checked + .filter__manufacture-indicator::before {
+  transform: rotate(45deg);
+}
+
+
+.filter__type {
+  position: relative;
+  padding-left: 43px;
+  cursor: pointer;
+}
+
+.filter__type-indicator {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.filter__type:hover {
+  color: #663d15;
+}
+
+.filter__type input:checked + .filter__type-indicator::before {
+  top: 4px;
+  left: 4px;
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+
+/*************** Catalog ****************/
+.catalog {
+  width: 700px;
+}
+
+.catalog__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__item {
+  width: 220px;
+  height: 286px;
+  margin: 0 20px 20px 0;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+}
+
+.catalog__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog__link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  text-decoration: none;
+  color: #000;
+}
+
+.catalog__item-heading {
+  margin: 0;
+  padding: 0 16px;
+}
+
+.catalog__item-category {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog__item-price {
+  display: flex;
+  background-color: #e5e5e5;
+  margin: 16px;
+  margin-top: 8px;
+  height: 43px;
+}
+
+.catalog__price-rub {
+  flex-grow: 1;
+  display: block;
+  text-align: center;
+  padding: 9px 0;
+}
+
+.catalog__price-btn {
+  flex-shrink: 0;
+  width: 70px;
+  text-align: center;
+  padding: 9px 0;
+}
+
+
+/**************** Pagination ***************/
+.pagination {
+  margin: 0;
+  margin-top: 45px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__item {
+  display: inline-block;
+}
+
+.pagination__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #000;
+  padding: 12px 18px;
+  margin-right: 4px;
+}
+
+.pagination__link:hover {
+  background-color: #663d15;
+}
+
+.pagination__item--current .pagination__link {
+  color: #000;
+  background-color: #fff;
+}
+
+
+
