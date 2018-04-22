@@ -9,25 +9,21 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="inner-page">
   <header class="main-header"> 
-    <nav class="main-nav">
-      <a class="main-header__logo"><img class="logo__image" width="371" height="155" src="img/index-logo.svg" alt="Логотип бабершопа "></a>
-      <div class="main-nav__top-wrapper">
-        <div class="container main-nav__container">
-          <ul class="site-nav">
-            <li class="site-nav__item"><a class="site-nav__link" href="#">Информация</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="#">Новости</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="#">Прайс-лист</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="#">Магазин</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
-          </ul>
-          
-          <ul class="user-options">
-            <li class="user-options__item"><a href="#" class="user-options__login-button">Вход</a></li>
-          </ul>
-        </div>
-      </div>
+    <nav class="main-nav container">
+      <a class="main-header__logo" href="index.html"><img class="logo__image" width="111" height="24" src="img/inner-logo.svg" alt="Логотип бабершопа "></a>
+      <ul class="site-nav">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html#info">Информация</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html#news">Новости</a></li>
+        <li class="site-nav__item site-nav__link--current"><a class="site-nav__link" href="price.html">Прайс-лист</a></li>
+        <li class="site-nav__item"><a href="shop.html" class="site-nav__link">Магазин</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html#info">Контакты</a></li>
+      </ul>
+      
+      <ul class="user-options">
+        <li class="user-options__item"><a href="#" class="user-options__login-button">Вход</a></li>
+      </ul>
     </nav>
   </header> 
   
@@ -36,11 +32,55 @@
     <h1 class="main-heading">Прайс-лист</h1>
     
     <ul class="breadcrumps">
-      <li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Главная</a></li>
-      <li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Магазин</a></li>
-      <li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Средства для ухода</a></li>
-      <li class="breadcrumps__item breadcrumps__item--current">Набор для путешествий «Baxter of California»</li>
+      <li class="breadcrumps__item"><a href="index.html" class="breadcrumps__link">Главная</a></li>
+      <li class="breadcrumps__item breadcrumps__item--current">Прайс-лист</li>
     </ul>
+    
+    <section class="inner-content">
+      <h2 class="big-heading">Истинно мужская классика</h2>
+      
+      <div class="ic-row">
+        <div class="ic-col-left">
+          <h2>Мы используем только лучшие средства:</h2>
+          <ul>
+            <li>Baxter of California</li>
+            <li>Mr Natty</li>
+            <li>Suavecito</li>
+            <li>Malin+Goetz</li>
+          </ul>          
+        </div>
+        
+        <div class="ic-col-right">
+          <h2>Цены на услуги наших мастеров:</h2>
+          <table class="custom-table-1">
+            <tr>
+              <td>Стрижка</td>
+              <td>1500 Р</td>
+            </tr>
+            <tr>
+              <td>Стрижка бороды</td>
+              <td>500 р</td>
+            </tr>
+            <tr>
+              <td>Накрутка усов</td>
+              <td>500 Р</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="ic-row">
+        <h2>Несколько слов о нас:</h2>
+        <div class="ic-col-left">
+          
+          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        </div>
+        <div class="ic-col-right">
+          <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+        </div>
+      </div>
+      
+    </section>
     
   </main>
   
@@ -57,19 +97,19 @@
         <p>Давайте дружить!</p>
         <ul class="social-links">
           <li class="social-links__item">
-            <a href="#" class="social-links__link">
+            <a href="http://vk.com" class="social-links__link">
               <h4 class="visually-hidden">Vkontakte</h4>
               <img src="img/vk.svg" alt="Иконка VK" class="social-links__icon">
             </a>
           </li>
           <li class="social-links__item">
-            <a href="#" class="social-links__link">
+            <a href="http://facebook.com" class="social-links__link">
               <h4 class="visually-hidden">Facebook</h4>
               <img src="img/facebook.svg" alt="Иконка Facebook" class="social-links__icon">
             </a>
           </li>
           <li class="social-links__item">
-            <a href="#" class="social-links__link">
+            <a href="http://instagram.com" class="social-links__link">
               <h4 class="visually-hidden">Instagram</h4>
               <img src="img/instagram.svg" alt="Иконка Instagram" class="social-links__icon">
             </a>
@@ -80,7 +120,7 @@
       <div class="developed-by">
         <div class="developed-by__wrapper">
           <p class="developed-by__text">Разработано:</p>
-          <a href="#" class="button button--hover-invert">@Avalsoff</a>
+          <a href="http://github.com/avalsoff" class="button button--hover-invert">@Avalsoff</a>
         </div>
       </div>
     </div>
@@ -114,5 +154,6 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
+  
 </body>
 </html>
